@@ -14,4 +14,58 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\cube_phong.frag.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\cube_phong.geom.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\cube_phong.vert.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\envmap_reflect.fs.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\envmap_reflect.geom.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\envmap_reflect.vs.glsl">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\Phong_Tx.frag">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\Phong_Tx.vert">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\simple.frag">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Shaders\simple.vert">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Shaders\LoadShaders.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment_Mapping.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Shaders\LoadShaders.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="My_Shading.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

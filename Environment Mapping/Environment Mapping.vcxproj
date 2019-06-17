@@ -89,10 +89,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\usr\local\OpenGL\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\usr\local\OpenGL\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;Freeimage.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -117,12 +120,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\usr\local\OpenGL\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\usr\local\OpenGL\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;Freeimage.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,6 +149,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="Shaders\cube_phong.frag.glsl" />
+    <None Include="Shaders\cube_phong.geom.glsl" />
+    <None Include="Shaders\cube_phong.vert.glsl" />
+    <None Include="Shaders\envmap_reflect.fs.glsl" />
+    <None Include="Shaders\envmap_reflect.geom.glsl" />
+    <None Include="Shaders\envmap_reflect.vs.glsl" />
+    <None Include="Shaders\Phong_Tx.frag" />
+    <None Include="Shaders\Phong_Tx.vert" />
+    <None Include="Shaders\simple.frag" />
+    <None Include="Shaders\simple.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Environment_Mapping.cpp" />
+    <ClCompile Include="Shaders\LoadShaders.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header.h" />
+    <ClInclude Include="My_Shading.h" />
+    <ClInclude Include="Objects.h" />
+    <ClInclude Include="Shaders\LoadShaders.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
